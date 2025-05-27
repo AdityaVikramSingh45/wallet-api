@@ -20,8 +20,9 @@ app.use(cors());
 
 // Or enable CORS for a specific origin (more secure)
 app.use(cors({
-  origin: 'http://localhost:8081',
-}));
+    origin: ['http://localhost:8081', 'https://wallet-api-gj0s.onrender.com'],
+  }));
+  
 
 app.get("/", (req, res)=>{
     res.send("It's working mannn....")
