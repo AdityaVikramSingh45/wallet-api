@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { sql } from "./config/db.js"; // Make sure the filename ends with `.js`
 import rateLimiter from "./midldlware/rateLimiter.js";
-import transactionRoute from "../backend/routes/transactions.js"
+import transactionRoute from "./routes/transactions.js"
 import { initDB } from "./config/db.js";
 import cors from "cors"
 
