@@ -5,8 +5,11 @@ import rateLimiter from "./midldlware/rateLimiter.js";
 import transactionRoute from "./routes/transactions.js"
 import { initDB } from "./config/db.js";
 import cors from "cors"
+import job from "../backend/config/cron.js"
 
 dotenv.config();
+
+if(process.env.NODE_ENV === "production") job.start();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,8 +27,8 @@ app.use(cors({
   }));
   
 
-app.get("/", (req, res)=>{
-    res.send("It's working mannn....")
+app.get("/api/health", (req, res)=>{
+    res.status(200).json({message: "Ok"});
 })
 
 //Mouting
