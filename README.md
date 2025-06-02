@@ -5,11 +5,8 @@ A beginner-friendly, cross-platform expense tracker app built with React Native 
 ---
 
 ## Demo
-
-![App Home Screen](./images/home-screen.png)  
 *Home screen showing balance and recent transactions*
 
-![Signup Screen](./images/signup-screen.png)  
 *User signup with Clerk authentication*
 
 ---
